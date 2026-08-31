@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy Learning Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Philosophy Learning Platform</h1>
+            <p class="subtitle">Interactive Knowledge Graphs for Understanding Philosophy</p>
+        </div>
+    </header>
+
+    <nav class="book-selector">
+        <a href="framework.html" class="book-btn">Framework Maps</a>
+        <button class="book-btn active" data-book="mind">Philosophy of Mind (Heil)</button>
+        <button class="book-btn" data-book="metaphysics">Metaphysics (Ney)</button>
+    </nav>
+
+    <main class="container">
+        <section class="overview" id="overview">
+            <h2 id="book-title">Philosophy of Mind: A Contemporary Introduction</h2>
+            <p id="book-author">by John Heil (3rd Edition, 2013)</p>
+            <p id="book-description">This book introduces central issues in philosophy of mind, focusing on the ontological basis of mentality and its place in the material world.</p>
+        </section>
+
+        <section class="graph-section">
+            <div class="graph-controls">
+                <h3>Knowledge Graph</h3>
+                <div class="controls">
+                    <button id="zoom-in" title="Zoom In">+</button>
+                    <button id="zoom-out" title="Zoom Out">-</button>
+                    <button id="reset" title="Reset View">Reset</button>
+                    <input type="text" id="search" placeholder="Search concepts...">
+                </div>
+                <p class="hint">Click on nodes to see details. Drag to reposition.</p>
+            </div>
+            <div id="graph-container"></div>
+        </section>
+
+        <section class="details-panel" id="details-panel">
+            <h3 id="detail-title">Select a concept</h3>
+            <div id="detail-content">
+                <p>Click on any node in the knowledge graph to see detailed information about that concept.</p>
+            </div>
+        </section>
+
+        <section class="chapters-section" id="chapters-section">
+            <h3>Chapter Overview</h3>
+            <div id="chapters-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Philosophy Learning Platform | Based on Heil's <em>Philosophy of Mind</em> and Ney's <em>Metaphysics</em></p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
